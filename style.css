@@ -1,0 +1,156 @@
+* {
+    font-family: 'montserrat', 'sans-serif';
+    transition: 600ms;
+}
+
+body {
+    //background:linear-gradient(rgb(72,0,72,0.8), rgb(192,72,72,0.8)),url(images/bg.jpg);
+    background:linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.5)),url(images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+}
+
+.bg-trans{
+    background-color: rgb(255, 255, 255, 0.3);
+    backdrop: blur(10px);
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    transition: 800ms;
+
+}
+.bg-trans:hover{
+    background-color: rgba(255, 255, 255, 0.45);
+    backdrop: blur(10px);
+    border: 1px solid rgb(255, 255, 255, 0.4);
+    box-shadow: 10px 10px 15px rgba(255, 255, 255, 0.34),-10px 10px 15px rgba(255, 255, 255, 0.34);
+
+}
+
+nav ul li a{
+ margin:1vh 3vw;
+    color:white;
+   
+    border-radius: 5px;
+    background-color:rgba(255,255,255,0);
+     transition: 1000ms;
+}
+nav ul li a:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    transition: 800ms;
+}
+
+.logo span {
+    color:rgba(255, 0, 0, 0.56);
+}
+.logo{
+    font-size:30px;
+}
+.flex-end{
+    justify-content: flex-end;
+   
+}
+.card{
+    width:30rem;
+    padding: 4px;
+    margin-bottom: 15px;
+    
+    }
+.btn{
+    color:white;
+    background-color:dodgerblue;
+}
+.btn:hover{
+    color:white;
+    background-color:crimson;
+}
+.card-title{
+    color:black;
+    background-color: aliceblue;
+    text-align: center;
+}
+.card-title span{
+    color:red;
+}
+.card-img-top{
+    border-radius:5px; 
+}
+.conainer-fluid{
+    padding:10px;
+    justify-content: space-around;
+}
+
+
+
+
+/*BOx two*/
+
+.box2{
+    width:auto;
+   display: flex;
+    flex-direction: column;
+    border-radius:8px;
+    background-color:rgb(255, 255, 255,0.3);
+    backdrop-filter: blur(10px);
+    border:1px solid rgb(255, 255, 255,0.4);
+    align-content: center;
+    transition:800ms;
+}
+.box2 h1{
+    text-align: center;
+    padding: 20px;
+    display:block;
+    color:white;
+    background-color:rgba(0, 0, 0, 0.2);
+}
+.box2 .inputgroup{
+    display: block;
+    text-align: center;
+    color:#000000;
+    display: flex;
+    align-content: space-around;
+    column-gap: 30px;
+    font-size: 15px;
+}
+.box2 .inputgroup table{
+    width: 100%;
+    height: 100%;
+    padding:40px;
+}
+.box2 .inputgroup table tr td{
+  padding: 2vw;
+}
+input{
+    background-color: rgb(247, 239, 239,0.9);
+    border: none;
+    border-radius: 8px;
+    height:30px;
+}
+
+button{
+    color:white;
+    background-color: dodgerblue;
+    border: none;
+    width:90px;
+    height:40px;
+}
+
+
+
+
+@media screen and (min-width:767px){
+    nav ul li a{
+  justify-self: center;
+}
+    .card{
+        width:20rem;
+    }
+    .box2{
+        margin:inherit;
+        width:inherit;
+    }
+
+}

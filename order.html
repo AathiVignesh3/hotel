@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- JavaScript Bundle with Popper -->
+     <script src="bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+   
+</head>
+<body onload="load()">
+        <nav class="navbar navbar-expand-md navbar-dark bg-trans sticky-top">
+            
+            <span class="navbar-text logo">Hotel<span>E</span>mpire</span>
+            
+            
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbardata">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+         <div class="collapse navbar-collapse flex-end" id="navbardata"> 
+               <ul class="navbar-nav" >
+                <li class="nav-item m-auto">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item m-auto">
+                    <a class="nav-link" href="order.html">Order</a>
+                </li>
+             <li class="nav-item m-auto">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+             <li class="nav-item m-auto">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    <div class="conainer-fluid d-flex flex-wrap row">        
+   <div class="card col-3 bg-trans">
+    <img id="img" class="card-img-top">
+    <div class="card=body">
+        <div class="card-title" >
+            <h3 id="value"></h3><span id="price"></span>
+        </div>
+        <div class="card-text">
+            
+             </div>
+               <div class="card-text">
+            Enter the detail for confirm to order your food
+            <br>
+            <br>
+                   <center><H5>THANK YOU</H5></center>
+             </div>
+         </div>
+          </div>
+    
+
+<div class="box2 col-6">
+<h1>Enter the details</h1>
+<div class="inputgroup">
+    <center>
+        <table>
+            <tr><td>Enter the Name:</td> <td><input type="text"></td></tr>
+            <tr><td>Enter the contact:</td> <td><input type="text"></td></tr>
+            <tr><td>Enter the location:</td> <td><input type="text"></td></tr>
+            <tr><td colspan="2"> <button onclick="message()">Confirm</button> </td></tr>
+        </table>
+    </center>
+</div>
+</div>
+
+
+    <script>
+        var item="";
+        function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+        function load(){
+         var value = getUrlVars()['value']
+         var price = getUrlVars()['price']
+         document.getElementById('value').innerHTML = value;
+            item=value;
+            value ="images/"+value+".jpg";
+         document.getElementById('img').setAttribute("src",value);
+         document.getElementById('price').innerHTML ="&#8377;"+price;
+        }
+        function message(){
+            window.confirm("Confirm your Order "+item);
+        }
+    </script>
+
+    </div>
+</body>
+</html>
